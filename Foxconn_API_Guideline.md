@@ -1,22 +1,10 @@
 # Foxconn API Guideline
 
-**Guideline參考資源**
-
-Google: [https://cloud.google.com/apis/design](https://cloud.google.com/apis/design)
-
-Microsoft: [https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md](https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md)
-
-isIand.is: [https://docs.devland.is/technical-overview/api-design-guide/resource-oriented-design](https://docs.devland.is/technical-overview/api-design-guide/resource-oriented-design)
-
-Meta: [https://developers.facebook.com/](https://developers.facebook.com/)
-
----
-
 # 1.引言
 
 Foxconn Cloud API
 
-![Developement](https://github.com/CityGPT/apim-guideline/blob/main/images/Developement.png)
+![Developement](https://github.com/CityGPT/apim-guideline/blob/main/images/Developement.png?raw=true)
 
 ## RFC 2119
 
@@ -47,7 +35,7 @@ Foxconn Cloud API
 
 ## 設計流程
 
-![StageTasks](https://github.com/CityGPT/apim-guideline/blob/main/images/StageTasks.png)
+![StageTasks](https://github.com/CityGPT/apim-guideline/blob/main/images/StageTasks.png?raw=true)
 
 資源來源分為開發戶和第三方服務。以五個階段的設計流程完成任務，準備、啟動、審核、設定、產出完成。
 
@@ -332,8 +320,6 @@ POST /api/order/12345:cancel
 - **202 Accepted**：請求已被接受，但尚未處理。這通常用於異步操作，其中刪除操作已排入隊列，但尚未完成。
 - **204 No Content**：請求成功，但沒有要回傳的內容。這通常在成功刪除資源後回傳。
 
-## 資源標籤
-
 ## 空響應
 
 空響應表示請求已經成功處理，但是沒有需要回傳給客戶端的內容。這種情況下，伺服器通常會回傳 HTTP 狀態碼 **`204 No Content`**。
@@ -343,8 +329,6 @@ POST /api/order/12345:cancel
 請求已被接受，但尚未處理。這通常用於異步操作，但尚未完成。
 
 HTTP狀態碼 `**202 Accepted**`。
-
-## 值類型
 
 ## 資源視圖
 

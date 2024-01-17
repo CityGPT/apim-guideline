@@ -28,4 +28,4 @@
     - 提供使用者監控或訂閱其用量的工具和通知機制。
     - 警告使用者當前用量接近限制。
 
-![Monitoring_Indicators](https://github.com/CityGPT/apim-guideline/blob/main/images/Monitoring_Indicators.png)
+![Monitoring_Indicators](https://github.com/CityGPT/apim-guideline/blob/main/images/Monitoring_Indicators.png?raw=true)
