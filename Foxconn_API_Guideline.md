@@ -225,10 +225,8 @@ POST /api/order/12345:cancel
 | Ocp-Apim-Subscription-Key | Request | d3cafz8z4xr289d0v4dv22x2dddx6z26 |
 | X-Content-Type-Options | Response | 預設值: nosniff |
 | X-Frame-Options | Response | 預設值: SAMEORIGIN |
-| X-Content-Security-Policy | Response | 預設值為空白，如果Host name不是localhost開頭，則為
-"default-src https:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'” |
-| Content-Security-Policy | Response | 預設值為空白，如果Host name不是localhost開頭，則為
-"default-src https:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'” |
+| X-Content-Security-Policy | Response | 預設值為空白，如果Host name不是localhost開頭，則為"default-src https:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'” |
+| Content-Security-Policy | Response | 預設值為空白，如果Host name不是localhost開頭，則為"default-src https:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'” |
 | Referrer-Policy | Response | 預設值: no-referrer |
 
 | Name | Type | Applies to | Description |
@@ -328,7 +326,7 @@ POST /api/order/12345:cancel
 
 請求已被接受，但尚未處理。這通常用於異步操作，但尚未完成。
 
-HTTP狀態碼 `**202 Accepted**`。
+HTTP狀態碼 **`202 Accepted`**。
 
 ## 資源視圖
 
@@ -377,7 +375,7 @@ API升版原則是指在開發和維護API時，如何進行版本控制以確�
 以下是一些主要的原則：
 
 1. **向後兼容性**：當對API進行升級或修改時，應確保新版本的API能夠與舊版本的客戶端應用程式正常工作，這意味著你不能移除或更改舊版本API的任何功能，除非已經發布了一個新版本的API並給出了足夠的升級通知。
-2. **版本控制**：你應該在API的URL或頭部信息中包含版本號，以便客戶端可以選擇使用哪個版本的API。例如，你可以使用URL中的路徑參數（如**`/v1/users`**）或接受頭部參數（如**`Accept: application/vnd.company.myapp-v1+json`**）來指定API的版本。
+2. **版本控制**：你應該在API的URL或頭部信息中包含版本號，以便客戶端可以選擇使用哪個版本的API。例如，你可以使用URL中的路徑參數（如 **`/v1/users`**）或接受頭部參數（如 **`Accept: application/vnd.company.myapp-v1+json`**）來指定API的版本。
 3. **廢止政策**：如果打算移除舊版本的API，應該提前通知用戶，並給他們足夠的時間來升級他們的應用程式以使用新版本的API，也應該在API的文檔中清楚地標記出哪些API已經被廢止或即將被廢止。
 4. **文檔和測試**：每當發布一個新版本的API時，都應該更新API文檔以反映任何新的或已更改的功能，提供足夠的測試工具和資源，以便開發人員可以測試他們的應用程式是否與新版本的API正常工作。
 
