@@ -86,19 +86,21 @@ API名稱命名慣例：
 1. 欄位名稱以駝峰式命名法，例：fieldName。
 2. 以s取代List。
 
+
+
 ## 路徑規則
 
 正式環境：
 
-WS/版本/View/資源/ID/子屬性
+​	WS/版本/View/資源/ID/子屬性
 
-WS/版本/View/資源:自訂動作
+​	WS/版本/View/資源:自訂動作
 
 測試環境：
 
-WS/環境/版本/View/資源/ID/子屬性
+​	WS/環境/版本/View/資源/ID/子屬性
 
-WS/環境/版本/View/資源:自訂動作
+​	WS/環境/版本/View/資源:自訂動作
 
 ## RFC1035
 
@@ -117,15 +119,15 @@ API服務名稱參照RFC1035建議，可以被拆成一個或多個網址ip，�
 標準視圖為定義對於資源操作時的視角，可以由名稱推測出使用這個視圖進行資源操作時，預期中的行爲反應。您`應該`遵循以下的定義，來規劃資源存取的存取方法。標準視圖分為三大類，分別為：
 
 - All (Entity)
-    
+  
     All 代表使用這個方法進行資源的存取時，進行操作的是這個資源主體的完整內容。同樣的，利用同樣的視圖進行查詢作業時，預期得到的也會是對應資源的完整內容。
     
 - Basic
-    
+  
     All 代表使用這個方法進行資源的存取時，進行操作的是這個資源主體的部分內容。對於資源主體的外部關聯性，都將以 Key-Value 的形式進行表示。
     
 - Custom (Extended)
-    
+  
     Custom 是客製化的視圖，當對於這個資源的存取，有客製化的邏輯或是資料結構產生時，可以使用 Custom 的視圖進行規劃。而當使用客製化的方式時，視圖的命名不限於使用 Custom 或是 Extended，可以依照實際的作用進行命名的規劃。但您`應該`使用一個易於理解意圖的名稱來作為命名的原則。
     
 
@@ -179,13 +181,13 @@ API底層已經支援的基本查詢條件如下：
 
 例：
 
-主查詢：取得某使用者的基礎內容，
+​	主查詢：取得某使用者的基礎內容，
 
-GET /api/Basic/usr/{id}
+​		GET /api/Basic/usr/{id}
 
-子查詢：取得某使用者的對話訊息，
+​	子查詢：取得某使用者的對話訊息，
 
-GET /api/Extended/usr/{id}/UserMessages
+​		GET /api/Extended/usr/{id}/UserMessages
 
 ### 狀態變更
 
@@ -229,6 +231,8 @@ POST /api/order/12345:cancel
 | Content-Security-Policy | Response | 預設值為空白，如果Host name不是localhost開頭，則為"default-src https:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'” |
 | Referrer-Policy | Response | 預設值: no-referrer |
 
+
+
 | Name | Type | Applies to | Description |
 | --- | --- | --- | --- |
 | id | long | Both | 唯一識別 |
@@ -252,23 +256,38 @@ POST /api/order/12345:cancel
 | isCrossTenant | bool | Both | 允許跨租戶 (若以高市府為主，應無租戶相關資訊?) |
 | status | int | Response | 狀態 |
 
+
+
 ### 查詢響應 (待確認)
+
+#### 成功
+
+| Name | Type | Description |
+| --- | --- | --- |
+| pageIndex | int | 目前指定的頁數 |
+| pageRows | int | 目前指定的每頁筆數 |
+| totalRows | int | 目前查詢條件下，符合條件的資料總筆數 |
+| Data | [Object] | 物件清單，物件定義**必需**在API文件中定義 |
+
+
+
+#### 失敗
 
 | Name | Type | Description |
 | --- | --- | --- |
 | isSuccess | bool | 是否成功 |
 | errorCode | string | 錯誤碼 |
 | message | string | 訊息 |
-| details | List<ResponseDetail> | 細節描述 |
+| details | [ResponseDetail] | 細節描述 |
 
 **ResponseDetail Object**
-
-通用響應
 
 | Name | Type | Description |
 | --- | --- | --- |
 | target | bool | 細節對象 |
 | message | string | 訊息 |
+
+
 
 ## Odata
 
@@ -329,6 +348,24 @@ POST /api/order/12345:cancel
 HTTP狀態碼 **`202 Accepted`**。
 
 ## 資源視圖
+
+為了減少網路流量，有時可允許用戶端限制伺服器應在其回應中傳回的資源部分，即傳回資源視圖而不是完整的資源表示形式。API 中的資源視圖支援是透過向方法請求參數來實現的，該參數允許客戶端指定希望在回應中接收的資源視圖。
+
+
+
+依據[路徑規則](#路徑規則)當中View，其定義名稱如下：
+
+| 視角名稱 | 定義   | 範例                          |
+| -------- | ------ | ----------------------------- |
+| Basic    | 基本   | /api/v1/**Basic**/RESOURCE    |
+| Entity   | 完整   | /api/v1/**Entity**/RESOURCE   |
+| Custom   | 客製化 | /api/v1/**Custom**/RESOURCE   |
+| Extended | 相關   | /api/v1/**Extended**/RESOURCE |
+| List     | 清單   | /api/v1/**List**/RESOURCE     |
+
+為每個`View`值傳回的具體內容是由實作定義的，**應該**在API 文件中指定。
+
+
 
 ## 負荷上限
 
