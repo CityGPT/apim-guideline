@@ -1,4 +1,6 @@
-# 8.設計模式
+[目錄](README.md "目錄")
+
+# 設計模式
 
 ## 狀態及刪除
 
@@ -43,3 +45,5 @@ HTTP 狀態碼 **`202 Accepted`**。
 計算基準：API 訂閱、IP Address、客製方式(待研究如何客製)
 
 增量條件：Successful response (Code: 2xx)、Any request、客製方式
+
+[目錄](README.md "目錄")
