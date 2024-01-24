@@ -34,6 +34,6 @@ API 名稱命名慣例：
 
 ## RFC1035
 
-API 服務名稱參照 RFC1035 建議，可以被拆成一個或多個網址 ip，以服務名稱為前綴詞，例如：maas.foxconn.com
+API 服務名稱參照 [RFC1035]("https://www.rfc-editor.org/rfc/rfc1035.txt") 建議，可以被拆成一個或多個網址 ip，以服務名稱為前綴詞，例如：maas.foxconn.com
 
 [目錄](README.md "目錄")

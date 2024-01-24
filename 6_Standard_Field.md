@@ -10,7 +10,7 @@
 
 | Header Key                | Applies to | Example                                                                                                                                         |
 | ------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authorization             | Request    | Bearer eyJ0...Xd6j (Support Azure Active Directory)                                                                                             |
+| Authorization             | Request    | 驗證用訊息，例如 Bearer eyJ0...Xd6j (Support Azure Active                                                                                       |
 | Ocp-Apim-Subscription-Key | Request    | d3cafz8z4xr289d0v4dv22x2dddx6z26                                                                                                                |
 | X-Content-Type-Options    | Response   | 預設值: nosniff                                                                                                                                 |
 | X-Frame-Options           | Response   | 預設值: SAMEORIGIN                                                                                                                              |

@@ -16,7 +16,7 @@
 
 ## RFC 2119
 
-> 需求級別關鍵字「必須(Must, Required, Shall)」、「不可(Must Not, Shall not)」、「應該(Should, Recommended)」、「不該(Should Not, Not Recommended)」，以及本文中使用的「可選(Optional)」應按照 [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) 中的說明進行解釋。
+> 需求級別關鍵字「應該(Must, Required, Shall)」、「不該(Must Not, Shall not)」、「建議(Should, Recommended)」、「不建議(Should Not, Not Recommended)」，以及本文中使用的「可選(Optional)」應按照 [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) 中的說明進行解釋。
 
 ## 用量限制
 
