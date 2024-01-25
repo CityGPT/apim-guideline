@@ -12,9 +12,9 @@
 
 ## 命名原則
 
-自定方法的命名須遵循[普遍原則]("General_Policy.md")
+自定方法的命名須遵循[普遍原則](General_Policy.md)
 
-路徑的命名則遵循[命名原則]("3_Nameing_Principles.md")
+路徑的命名則遵循[命名原則](3_Nameing_Principles.md)
 
 自訂動作的部分**應該**經由 : 組成的後綴作為結尾，例如
 
