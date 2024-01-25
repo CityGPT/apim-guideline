@@ -6,17 +6,14 @@
 
 ## Http Method
 
-> 對於動作行為的自訂方法，Http Method 請一律使用 POST。
-
-> 對於已經加入特定過濾條件的取得自訂方法，Http Method 則一律使用 GET。
+1. 對於動作行為的自訂方法，Http Method 請一律使用 POST。
+2. 對於已經加入特定過濾條件的取得自訂方法，Http Method 則一律使用 GET。
 
 ## 命名原則
 
-自定方法的命名須遵循[普遍原則](General_Policy.md)
-
-路徑的命名則遵循[命名原則](3_Nameing_Principles.md)
-
-自訂動作的部分**應該**經由 : 組成的後綴作為結尾，例如
+1. 自定方法的命名須遵循[普遍原則](General_Policy.md)
+2. 路徑的命名則遵循[命名原則](3_Nameing_Principles.md)
+3. 自訂動作的部分**應該**經由 : 組成的後綴作為結尾，例如
 
 ```
 https:/DoaminName/環境/功能/版本/View/資源:自訂動作
