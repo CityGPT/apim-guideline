@@ -30,10 +30,10 @@ HTTP 狀態碼 **`202 Accepted`**。
 
 | 視角名稱 | 定義   | 範例                          |
 | -------- | ------ | ----------------------------- |
-| Basic    | 基本   | /api/v1/**Basic**/RESOURCE    |
-| Entity   | 完整   | /api/v1/**Entity**/RESOURCE   |
-| Custom   | 客製化 | /api/v1/**{Custom}**/RESOURCE |
-| List     | 清單   | /api/v1/**List**/RESOURCE     |
+| Basic    | 基本   | /**Basic**/RESOURCE    |
+| Entity   | 完整   | /**Entity**/RESOURCE   |
+| Custom   | 客製化 | /**{Custom}**/RESOURCE |
+| List     | 清單   | /**List**/RESOURCE     |
 
 其中 {Custom} 指的是因應任何需要而新增的 View，其命名依實際業務需求而命名，可以是標準 View 以外的其他任何用詞。
 

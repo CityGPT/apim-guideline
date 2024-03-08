@@ -87,11 +87,11 @@ API 底層已經支援的基本查詢條件如下：
 
 ​ 主查詢：取得某使用者的基礎內容，
 
-​ GET /api/Basic/usr/{id}
+​ GET /Basic/usr/{id}
 
 ​ 子查詢：取得某使用者的對話訊息，
 
-​ GET /api/Extended/usr/{id}/UserMessages
+​ GET /Extended/usr/{id}/UserMessages
 
 ### 狀態變更
 
