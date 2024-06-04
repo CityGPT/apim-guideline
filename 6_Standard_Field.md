@@ -13,7 +13,7 @@
 | Authorization             | Request  | IDP 驗證訊息，例如 : Bearer eyJ0...Xd6j                                                                                                         |
 | Ocp-Apim-Subscription-Key | Request  | APIM 驗證訊息，例如 : d3cafz8z4xr289d0v4dv22x2dddx6z26                                                                                          |
 | Content-Language          | Request  | 指定語言 : en                                                                                                                                   |
-| X-Api-Version             | Response | 指定版本編號
+| X-Api-Version             | Request | 指定版本編號
 | X-Content-Type-Options    | Response | 預設值: nosniff                                                                                                                                 |
 | X-Frame-Options           | Response | 預設值: SAMEORIGIN                                                                                                                              |
 | X-Content-Security-Policy | Response | 預設值為空白，如果 Host name 不是 localhost 開頭，則為"default-src https:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'” |
